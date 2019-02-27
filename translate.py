@@ -13,9 +13,9 @@ def translate_sequence(rna_sequence, genetic_code):
     If `rna_sequence` is less than 3 bases long, or starts with a stop codon,
     an empty string is returned.
     """
-    if rna_sequence <3 and not ("UGA", "UAA", "UGA"):
+    if rna_sequence >=3 and not ("UGA", "UAA", "UAG"):
         for rna_sequence in genetic_code:
-            print(value)
+            print(genetic_code[values])
 
     else:
         return ''
@@ -39,7 +39,7 @@ def get_all_translations(rna_sequence, genetic_code):
     """
     if rna_sequence:
         for rna_sequence in genetic_code:
-            print(element, "-->", genetic_code[element])
+            print(rna_sequence, "-", genetic_code[values])
     else:
         return ''
 
@@ -54,8 +54,8 @@ def get_reverse(sequence):
     """
     if sequence:
         seq=sequence.upper()
-        rev_seq=seq[::-1]
-        return rev_seq
+        reverse_seq=seq[::-1]
+        return reverse_seq
 
     else:
 
@@ -72,8 +72,8 @@ def get_complement(sequence):
     """
     if sequence:
         seq=list(sequence.upper())
-        comps = {'C':'G','G':'C','U':'A','A':'U'}
-        seq=[comps[base] for base in seq]
+        complementary = {'C':'G','G':'C','U':'A','A':'U'}
+        seq=[complementary[base] for base in seq]
         return ''.join(seq)
     else:
 
@@ -110,6 +110,10 @@ def get_longest_peptide(rna_sequence, genetic_code):
     If no amino acids can be translated from `rna_sequence` nor its reverse and
     complement, an empty list is returned.
     """
+    for rna_sequence in genetic_code:
+        return ''
+    else:
+        return ''
     pass
 
 
