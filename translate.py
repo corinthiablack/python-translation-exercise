@@ -13,7 +13,7 @@ def translate_sequence(rna_sequence, genetic_code):
     If `rna_sequence` is less than 3 bases long, or starts with a stop codon,
     an empty string is returned.
     """
-    if rna_sequence >=3 and not ("UGA", "UAA", "UGA"):
+    if rna_sequence <3 and not ("UGA", "UAA", "UGA"):
         for rna_sequence in genetic_code:
             print(value)
 
@@ -37,6 +37,12 @@ def get_all_translations(rna_sequence, genetic_code):
     If no amino acids can be translated from `rna_sequence`, an empty list is
     returned.
     """
+    if rna_sequence:
+        for rna_sequence in genetic_code:
+            print(element, "-->", genetic_code[element])
+    else:
+        return ''
+
     pass
 
 def get_reverse(sequence):
